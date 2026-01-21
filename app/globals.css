@@ -175,7 +175,12 @@
 .animate-blur-fade-in {
   animation: blurFadeIn 0.8s ease-out forwards;
 }
-
+.highlight-marker {
+    background: linear-gradient(120deg, hsl(52 85% 62% / 0.3) 0%, hsl(52 85% 62% / 0.3) 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 40%;
+    background-position: 0 85%;
+}
 /* Enhanced spring slide-up with scale */
 @keyframes springSlideUp {
   0% {

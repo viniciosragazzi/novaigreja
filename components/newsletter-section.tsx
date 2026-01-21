@@ -26,7 +26,7 @@ export function NewsletterSection() {
           <span className="text-sm font-medium text-nova-yellow">Newsletter</span>
         </div>
 
-        <h2 className="text-3xl sm:text-4xl font-bold text-background mb-4 text-balance">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-background mb-4 text-balance">
           Receba dicas de gestão e tecnologia para sua igreja semanalmente
         </h2>
         <p className="text-lg text-background/70 mb-8">

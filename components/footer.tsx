@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { Instagram, Linkedin } from "lucide-react"
+import Image from "next/image"
 
 const footerLinks = ["Sobre nós", "Segurança", "Ajuda", "Blog"]
 
@@ -9,10 +10,8 @@ export function Footer() {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-nova-yellow rounded-lg flex items-center justify-center">
-              <span className="font-bold text-nova-dark text-sm">N</span>
-            </div>
-            <span className="font-semibold text-foreground">Nova Igreja</span>
+                        <Image src="/logo-nova-igreja.svg" alt="Nova Igreja" width={140} height={40} className="h-10 w-auto" />
+            
           </div>
 
           <nav className="flex items-center gap-6">

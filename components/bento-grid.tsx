@@ -17,6 +17,8 @@ import {
 import { TiltCard } from "./tilt-card"
 import { AnimatedSection } from "./animated-section"
 import { useState, useEffect, useRef } from "react"
+import { useIsMobile } from "@/hooks/use-mobile"
+
 
 function EngagementGauge({ value = 82 }: { value?: number }) {
   const [isVisible, setIsVisible] = useState(false)
@@ -274,33 +276,35 @@ export function BentoGrid() {
     >
       <div className="max-w-7xl mx-auto">
         <AnimatedSection animation="blur-fade" className="text-center mb-12">
-          <span className="text-xs font-medium text-nova-dark bg-nova-yellow px-4 py-2 rounded-full">
+          <span className="text-sm font-medium text-nova-dark bg-nova-yellow px-4 py-2 rounded-full">
             Funcionalidades
           </span>
-          <h2 className="text-2xl sm:text-3xl font-bold text-foreground mt-5 mb-3 text-balance">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground mt-6 mb-4 text-balance">
             Tudo que você precisa em um só lugar
           </h2>
-          <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Ferramentas pensadas para quem cuida de pessoas, não de planilhas.
           </p>
         </AnimatedSection>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {bentoCards.map((card, index) => (
-            <AnimatedSection key={card.id} animation="spring-up" delay={index * 100}>
-              <TiltCard className="group bg-background border border-border rounded-2xl p-5 hover:border-nova-yellow transition-all duration-300 card-glow h-full">
-                <div className="flex items-start justify-between mb-2">
-                  <div className="w-10 h-10 rounded-xl bg-nova-yellow/20 flex items-center justify-center group-hover:bg-nova-yellow transition-colors">
-                    <card.icon className="w-5 h-5 text-nova-dark" />
-                  </div>
-                </div>
-                <h3 className="text-sm font-semibold text-foreground mb-1">{card.title}</h3>
-                <p className="text-xs text-muted-foreground">{card.desc}</p>
-                <card.component />
-              </TiltCard>
-            </AnimatedSection>
-          ))}
-        </div>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+  {bentoCards
+    .filter((card, index) => index < 4 || !useIsMobile())
+    .map((card, index) => (
+      <AnimatedSection key={card.id} animation="spring-up" delay={index * 100}>
+        <TiltCard className="group bg-background border border-border rounded-2xl p-5 hover:border-nova-yellow transition-all duration-300 card-glow h-full">
+          <div className="flex items-start justify-between mb-2">
+            <div className="w-10 h-10 rounded-xl bg-nova-yellow/20 flex items-center justify-center group-hover:bg-nova-yellow transition-colors">
+              <card.icon className="w-5 h-5 text-nova-dark" />
+            </div>
+          </div>
+          <h3 className="text-sm font-semibold text-foreground mb-1">{card.title}</h3>
+          <p className="text-xs text-muted-foreground">{card.desc}</p>
+          <card.component />
+        </TiltCard>
+      </AnimatedSection>
+    ))}
+</div>
       </div>
     </section>
   )

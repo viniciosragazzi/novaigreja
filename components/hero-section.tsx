@@ -36,7 +36,7 @@ export function HeroSection() {
 
   return (
     <section className="py-12 md:py-20">
-      <div className="grid lg:grid-cols-2 gap-8 items-center">
+      <div className="grid xl:grid-cols-2 gap-8 items-center">
         {/* Left side - Yellow card with text */}
         <div className="relative">
           <div className="bg-nova-yellow rounded-[32px] p-10 md:p-14 relative overflow-hidden">

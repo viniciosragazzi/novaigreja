@@ -25,7 +25,9 @@ export function PartnershipSection() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <span className="text-sm font-medium text-nova-dark bg-nova-yellow/20 px-4 py-2 rounded-full">Parceiros</span>
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mt-6 mb-4 text-balance">Cresça com o Reino</h2>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground mt-6 mb-4 text-balance">
+            Cresça com o Reino
+          </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Seja um parceiro integrador ou um consultor oficial do Nova Igreja e ajude a transformar comunidades.
           </p>

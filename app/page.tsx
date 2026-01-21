@@ -12,6 +12,8 @@ import { FaqSection } from "@/components/faq-section"
 import { ContactForm } from "@/components/contact-form"
 import { Footer } from "@/components/footer"
 import { ReadingProgress } from "@/components/reading-progress"
+import { PersonasSection } from "@/components/personas-section"
+import { FeaturesSection } from "@/components/features-section"
 
 export default function Home() {
   return (
@@ -20,7 +22,8 @@ export default function Home() {
         <ReadingProgress />
         <Header />
         <HeroSection />
-        <BentoGrid />
+        <FeaturesSection />
+        <PersonasSection />
         <EmpathyBridge />
         <SupportChat />
         <TestimonialsSection />

@@ -1,5 +1,6 @@
 import { CalendarCheck, Database, Zap, Airplay } from "lucide-react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { AnimatedSection } from "./animated-section"
 
 const features = [
   {
@@ -32,35 +33,36 @@ export function FeaturesSection() {
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <span className="text-xs font-medium text-nova-dark bg-nova-yellow/20 px-3 py-1.5 rounded-full">Módulos</span>
-          <h2 className="text-2xl sm:text-3xl font-bold text-foreground mt-5 mb-3 text-balance">
+        <AnimatedSection animation="blur-fade" className="text-center mb-12">
+          <span className="text-sm font-medium text-nova-dark bg-nova-yellow/20 px-4 py-2 rounded-full">
+            Módulos
+          </span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground mt-6 mb-4 text-balance">
             Um ecossistema feito para crescer com você
           </h2>
-          <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Diga adeus à bagunça de usar vários sistemas. O Nova Igreja une todas as frentes da sua comunidade em uma
             interface intuitiva.
           </p>
-        </div>
+        </AnimatedSection>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 stagger-children">
-          {features.map((feature) => (
-            <Card
-              key={feature.id}
-              className="group cursor-pointer transition-all duration-300 soft-shadow hover:soft-shadow-lg border-border bg-background hover:border-nova-yellow/30 rounded-3xl card-glow"
-            >
-              <CardHeader className="pb-3">
-                <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-3 bg-nova-yellow/10 group-hover:bg-nova-yellow transition-colors">
-                  <feature.icon className="w-6 h-6 text-nova-dark animate-float-subtle" />
-                </div>
-                <CardTitle className="text-base text-foreground">{feature.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-muted-foreground text-sm leading-relaxed">
-                  {feature.description}
-                </CardDescription>
-              </CardContent>
-            </Card>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+          {features.map((feature, index) => (
+            <AnimatedSection key={feature.id} animation="spring-up" delay={index * 100}>
+              <Card className="group cursor-pointer transition-all duration-300 soft-shadow hover:soft-shadow-lg border-border bg-background hover:border-nova-yellow/30 rounded-3xl card-glow h-full">
+                <CardHeader className="pb-3">
+                  <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-3 bg-nova-yellow/10 group-hover:bg-nova-yellow transition-colors">
+                    <feature.icon className="w-6 h-6 text-nova-dark animate-float-subtle" />
+                  </div>
+                  <CardTitle className="text-base text-foreground">{feature.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-muted-foreground text-sm leading-relaxed">
+                    {feature.description}
+                  </CardDescription>
+                </CardContent>
+              </Card>
+            </AnimatedSection>
           ))}
         </div>
       </div>

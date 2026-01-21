@@ -10,7 +10,7 @@ export function EvolutionTimeline() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <span className="text-sm font-medium text-nova-dark bg-nova-yellow/20 px-4 py-2 rounded-full">Evolução</span>
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mt-6 mb-4 text-balance">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground mt-6 mb-4 text-balance">
             Um software que nunca para de evoluir
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -30,7 +30,7 @@ export function EvolutionTimeline() {
             </div>
             <ul className="space-y-4">
               {currentUpdates.map((item) => (
-                <li key={item} className="flex items-center gap-3">
+                <li key={item} className="flex items-center gap-3 text-base">
                   <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                   <span className="text-muted-foreground">{item}</span>
                 </li>
@@ -48,7 +48,7 @@ export function EvolutionTimeline() {
             </div>
             <ul className="space-y-4">
               {comingSoon.map((item) => (
-                <li key={item} className="flex items-center gap-3">
+                <li key={item} className="flex items-center gap-3 text-base">
                   <div className="w-2 h-2 bg-nova-yellow rounded-full"></div>
                   <span className="text-muted-foreground">{item}</span>
                 </li>
