@@ -18,7 +18,7 @@ export function ContactForm() {
   }
 
   return (
-    <section id="contact" className="py-24 lg:py-32 relative bg-muted/30 ">
+    <section id="contact" className="py-24 lg:py-32 relative bg-muted/30  lg:px-[140px]">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-background to-transparent"></div>
         <div className="absolute top-20 left-10 w-72 h-72 bg-nova-yellow/5 rounded-full blur-3xl"></div>

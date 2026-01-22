@@ -33,9 +33,7 @@ export function RoiCalculator() {
       <div className="max-w-4xl mx-auto">
         <AnimatedSection animation="blur-fade" className="text-center mb-12">
           <span className="text-sm font-medium text-nova-dark bg-nova-yellow px-4 py-2 rounded-full">Calculadora</span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mt-6 mb-4 text-balance">
-            Calcule sua Liberdade
-          </h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mt-6 mb-4 text-balance">Calcule sua Liberdade</h2>
           <p className="text-lg text-gray-400 max-w-2xl mx-auto">
             Descubra quantas horas por mês sua equipe pode economizar com o Nova Igreja.
           </p>
